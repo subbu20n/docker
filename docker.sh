@@ -8,7 +8,7 @@ systemctl start docker
 systemctl enable docker 
 usermod -aG docker ec2-user 
 
-growpart /dev/nvmeon1 4 
+growpart /dev/nvme0n1 4 
 
 lvextend -L +20G  /dev/RootVG/rootVol 
 lvextend -L +10G  /dev/RootVG/varVol 
