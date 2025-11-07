@@ -1,9 +1,9 @@
 resource "aws_instance" "docker" {
   ami = local.ami_id 
-  instance_type = "t3.medium"
+  instance_type = "t3.micro"
   vpc_security_group_ids = [aws_security_group.allow_all_docker.id]
 
-  #need more for terraform 
+  #need more for terraform  
   root_block_device {
     volume_size = 50 
     volume_type = "gp3" # or gpe depending on your preference 
@@ -14,12 +14,12 @@ resource "aws_instance" "docker" {
 
   tags = {
     Name = "${var.project}-${var.environment}-docker" 
-  }
+  } 
 } 
 
 resource "aws_security_group" "allow_all_docker" {
   name = "allow_all_docker" 
-  description = "allow all traffic" 
+  description = "allow all traffic"  
 
   ingress {
     from_port = 0 
@@ -40,4 +40,4 @@ resource "aws_security_group" "allow_all_docker" {
   tags = {
     Name = "${var.project}-${var.environment}-docker" 
   }
-}
+} 
