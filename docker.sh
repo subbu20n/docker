@@ -9,12 +9,12 @@ systemctl enable docker
 usermod -aG docker ec2-user 
 
 growpart /dev/nvme0n1 4 
+pvresize /dev/nvme0n1p4
 
-lvextend -L +20G  /dev/RootVG/rootVol  
-lvextend -L +10G  /dev/RootVG/varVol 
+lvextend -l +20G  /dev/RootVG/rootVol  
+lvextend -l +10G  /dev/RootVG/varVol 
 
 xfs_growfs /
 xfs_growfs /var 
 
 
-  
