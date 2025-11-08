@@ -20,7 +20,7 @@ resource "aws_instance" "docker" {
 resource "aws_security_group" "allow_all_docker" {
   name = "allow_all_docker" 
   description = "allow all traffic"  
-
+ 
   ingress {
     from_port = 0 
     to_port   = 0 
