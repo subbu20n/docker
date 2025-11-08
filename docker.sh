@@ -13,4 +13,4 @@ lvextend -L +10G /dev/RootVG/varVol
 
 xfs_growfs /
 xfs_growfs /var
-    
+     
