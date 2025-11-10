@@ -9,12 +9,12 @@ resource "aws_instance" "docker" {
     volume_type = "gp3" # or gpe depending on your preference 
   }
 
-  user_data = file("docker.sh")
+  user_data = file("docker.sh") 
   #iam_instance_profile = "TerraformAdmin" 
 
   tags = {
     Name = "${var.project}-${var.environment}-docker" 
-  } 
+  }  
 } 
 
 resource "aws_security_group" "allow_all_docker" {
