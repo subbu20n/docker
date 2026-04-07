@@ -12,8 +12,8 @@ data "aws_ami" "joindevops" {
     values = ["ebs"]
   }
 
-  filter {
+  filter { 
     name   = "virtualization-type"
     values = ["hvm"]
   }
-}
+} 
