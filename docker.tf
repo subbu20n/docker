@@ -16,7 +16,7 @@ resource "aws_instance" "docker" {
     Name = "${var.project}-${var.environment}-docker" 
   }  
 } 
-
+  
 resource "aws_security_group" "allow_all_docker" {
   name = "allow_all_docker" 
   description = "allow all traffic"  
