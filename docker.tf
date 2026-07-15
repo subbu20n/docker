@@ -8,8 +8,8 @@ resource "aws_instance" "docker" {
   #   volume_size = 50 
   #   volume_type = "gp3" # or gpe depending on your preference 
   # }
-
-  # user_data = file("docker.sh") 
+ 
+  # user_data = file("docker.sh")      
   #iam_instance_profile = "TerraformAdmin" 
 
   tags = {
