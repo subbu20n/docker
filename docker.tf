@@ -40,4 +40,4 @@ resource "aws_security_group" "allow_all_docker" {
   tags = {
     Name = "${var.project}-${var.environment}-docker" 
   }
-} 
+}     
